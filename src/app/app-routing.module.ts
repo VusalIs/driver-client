@@ -6,6 +6,10 @@ const routes: Routes = [
     path: '',
     redirectTo: 'landing',
     pathMatch: 'full'
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./user-content/user-content.module').then(m => m.UserContentModule)
   }
 ];
 

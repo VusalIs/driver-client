@@ -25,12 +25,12 @@ export class LoginPageComponent implements OnInit {
     });
   }
 
-  async ngOnInit() {
+  ngOnInit() {
     
   }
 
-  async onSubmit() {
-    console.log(this.form)
+  onSubmit() {
+    console.log(this.form.value)
   }
 
 }

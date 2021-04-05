@@ -1,20 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
-
 $primary :#1a1a1a;
-
-* {
-  font-family: 'Nunito Sans';
-}
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  background: #F0F3F5;
-}
 
 h1 {
   margin: 0;
@@ -28,7 +12,6 @@ h1 {
   padding-top: 0px !important;
   position: absolute;
   right: 0;
-
 }
 
 .desktop-hide {
@@ -78,18 +61,6 @@ h1 {
 .mat-button {
   font-size: 24px;
   line-height: 58px !important;
-}
-
-.mat-toolbar {
-  background-color: $primary !important;
-
-}
-
-
-.nav {
-  position: fixed;
-  width: 100%;
-  z-index: 9;
 }
 
 .mat-list-base .mat-list-item {
@@ -296,58 +267,4 @@ img {
 
 .mat-form-field.mat-focused .mat-form-field-ripple {
   background-color: $primary !important;
-}
-
-@media(max-width:768px) {
-  .nav {
-    display: none !important;
-  }
-
-  .desktop-hide {
-    display: block !important;
-  }
-
-  .silder h1 {
-    font-size: 36px;
-  }
-
-  .features {
-    .row {
-      flex-direction: column;
-    }
-
-    .column {
-      width: 100% !important;
-    }
-  }
-
-  .contents {
-    h2 {
-      padding: 0px !important;
-
-    }
-
-    .row {
-      flex-direction: column;
-    }
-
-    .row:nth-child(2),
-    .row:nth-child(4) {
-      display: none;
-    }
-
-    .column {
-      width: 100% !important;
-    }
-  }
-}
-
-@media(max-width:542px) {
-  .contactus {
-    height: auto;
-
-    form {
-      width: 70%;
-    }
-  }
 }
