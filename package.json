@@ -46,7 +46,7 @@
     "typescript": "~4.1.5"
   },
   "engines": {
-    "node": "12.16.0",
-    "version": "8.4.0"
+    "node": "10.16.0",
+    "version": "6.4.0"
   }
 }
