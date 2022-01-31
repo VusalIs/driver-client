@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'trading-client'`, () => {
+  it(`should have as title 'driver-client'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('trading-client');
+    expect(app.title).toEqual('driver-client');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('trading-client app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('driver-client app is running!');
   });
 });

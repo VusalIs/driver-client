@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { GlobalErrorHandlerService } from 'src/app/global-error-handler.service';
+import { RequestsService } from 'src/app/requests.service';
 
 @Component({
   selector: 'app-login-page',
@@ -14,7 +16,8 @@ export class LoginPageComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private route: ActivatedRoute,
+    private request: RequestsService,
+    private globalErrorHandler: GlobalErrorHandlerService,
     private router: Router,
   ) {
     this.loginInvalid = false;
@@ -29,8 +32,8 @@ export class LoginPageComponent implements OnInit {
     
   }
 
-  onSubmit() {
-    console.log(this.form.value)
+  async onSubmit() {
+    this.request.loginUser(this.form.getRawValue()).subscribe(res => this.router.navigate(['/dashboard']), err => this.globalErrorHandler.dataUpdated.emit(err))
   }
 
 }

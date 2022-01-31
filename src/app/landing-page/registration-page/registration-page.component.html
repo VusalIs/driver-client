@@ -9,16 +9,22 @@
                   The credentials were not recognised
                 </mat-error>
                 <mat-form-field class="full-width-input">
-                    <input matInput placeholder="First Name" formControlName="firstName" required>
+                    <input matInput placeholder="First Name" formControlName="first_name" required>
                     <mat-error>
                       Please provide a first name
                     </mat-error>
                 </mat-form-field>
                 <mat-form-field class="full-width-input">
-                    <input matInput placeholder="Last Name" formControlName="lastName" required>
+                    <input matInput placeholder="Last Name" formControlName="last_name" required>
                     <mat-error>
                       Please provide a last name
                     </mat-error>
+                </mat-form-field>
+                <mat-form-field class="full-width-input">
+                  <input matInput placeholder="Username" formControlName="username" required>
+                  <mat-error>
+                    Please provide a valid username
+                  </mat-error>
                 </mat-form-field>
                 <mat-form-field class="full-width-input">
                   <input matInput placeholder="Email" formControlName="email" required>
@@ -32,7 +38,7 @@
                     Please provide a valid password
                   </mat-error>
                 </mat-form-field>
-                <button mat-raised-button color="primary">Login</button>
+                <button mat-raised-button color="primary">Register</button>
               </form>
             </mat-card-content>
           </mat-card>

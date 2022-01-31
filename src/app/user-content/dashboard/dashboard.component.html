@@ -1,5 +1,13 @@
-<mat-sidenav-container class="example-container" >
-  <mat-sidenav opened mode="side">Start content</mat-sidenav>
-  <mat-sidenav opened mode="side" position="end">End content</mat-sidenav>
-  Implicit main content
+<mat-sidenav-container class="example-container">
+  <mat-sidenav opened mode="side">
+    <mat-list role="list">
+      <mat-list-item role="listitem"
+        ><a mat-button routerLink="trade-now/bitcoin">Your files</a></mat-list-item
+      >
+      <mat-list-item role="listitem"
+        ><a mat-button routerLink="coin-list">Settings</a></mat-list-item
+      >
+    </mat-list>
+  </mat-sidenav>
+  <router-outlet></router-outlet>
 </mat-sidenav-container>

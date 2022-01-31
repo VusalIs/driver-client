@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { GlobalErrorHandlerService } from 'src/app/global-error-handler.service';
+import { RequestsService } from 'src/app/requests.service';
 
 @Component({
   selector: 'app-registration-page',
@@ -14,16 +16,18 @@ export class RegistrationPageComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private route: ActivatedRoute,
+    private requests: RequestsService,
+    private globalErrorHandler: GlobalErrorHandlerService,
     private router: Router,
   ) {
     this.registrationInvalid = false;
     this.formSubmitAttempt = false;
     this.form = this.fb.group({
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
+      first_name: ['', Validators.required],
+      last_name: ['', Validators.required],
       email: ['', Validators.email],
-      password: ['', Validators.required]
+      password: ['', Validators.required],
+      username: ['', Validators.required]
     });
   }
 
@@ -32,6 +36,6 @@ export class RegistrationPageComponent implements OnInit {
   }
 
   onSubmit() {
-    
+    this.requests.registerUser(this.form.getRawValue()).subscribe(res => this.router.navigate(['/landing/login']), err => this.globalErrorHandler.dataUpdated.emit(err))
   }
 }

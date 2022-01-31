@@ -17,9 +17,14 @@ import { LandingPageContentComponent } from './landing-page-content/landing-page
 import { LoginPageComponent } from './login-page/login-page.component';
 import { RegistrationPageComponent } from './registration-page/registration-page.component';
 
-
 @NgModule({
-  declarations: [NavbarComponent, LandingContentComponent, LandingPageContentComponent, LoginPageComponent, RegistrationPageComponent],
+  declarations: [
+    NavbarComponent,
+    LandingContentComponent,
+    LandingPageContentComponent,
+    LoginPageComponent,
+    RegistrationPageComponent,
+  ],
   imports: [
     CommonModule,
     LandingPageRoutingModule,
@@ -32,7 +37,7 @@ import { RegistrationPageComponent } from './registration-page/registration-page
     MatSidenavModule,
     MatCardModule,
     FormsModule,
-    ReactiveFormsModule
-  ]
+    ReactiveFormsModule,
+  ],
 })
-export class LandingPageModule { }
+export class LandingPageModule {}
