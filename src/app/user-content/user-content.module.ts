@@ -13,7 +13,6 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatIconModule } from '@angular/material/icon';
-import { ChartModule } from 'angular2-chartjs';
 import {MatSelectModule} from '@angular/material/select';
 
 import { UserContentRoutingModule } from './user-content-routing.module';
@@ -38,7 +37,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MatTableModule,
     MatPaginatorModule,
     MatIconModule,
-    ChartModule,
     MatSelectModule
   ],
 })
