@@ -2,7 +2,7 @@
   "name": "driver-client",
   "version": "0.0.0",
   "scripts": {
-    "heroku-postbuild": "npm install",
+    "heroku-postbuild": "cd ANGULAR_APP_FOLDER && npm install",
     "ng": "ng",
     "start": "ng serve --proxy-config proxy.config.json",
     "build": "ng build",
