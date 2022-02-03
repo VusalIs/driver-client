@@ -1,6 +1,5 @@
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { of } from "rxjs";
 import { Router } from '@angular/router';
 
 @Injectable({
@@ -34,11 +33,6 @@ export class RequestsService  {
 
   public addToFavorites(coinId: string){
     return this.http.post(`${this.mainUrl}/coin/add-favorite/${coinId}`, {}, this.httpOptions);
-  }
-
-  public getCoinsData(coinsId: Array<string>){
-    if(coinsId.length != 0) return this.http.get(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${coinsId.join(',')}&order=market_cap_desc&per_page=10&page=1&sparkline=false`)
-    else return of([]);
   }
 
   public getCoinData(coinId: string, timeInterval: string){
